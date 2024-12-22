@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(172, 129, 76);
+    display: flex;
+}
+
+#HL {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
+.text {
+    position: absolute;
+    top: auto;
+    left: 1100px;
+    size: 20%;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#it {
+    font-style: italic;
+    font-size: small;
+}
