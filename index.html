@@ -12,9 +12,31 @@
         <h1 id="HL">MISSING PERSON REPORT</h1>
         <p>Please fill in where you have seen him:</p>
         <input type="text" id="location" placeholder="Roblox hq." required>
-        <button type="button" id="submitButton">Submit</button>
-        <p id="it">thank you for your intel</p>
+        <button type="button" id="submitButton" onclick="sendMessage()">Submit</button>
+        <p id="it">don't put anything sensitive*</p>
     </form>
       
+    <script>
+        function sendMessage() {
+          // Get the message from the input field
+          var message = document.getElementById("location").value;
+        
+          // Replace with your actual Discord webhook URL
+          var webhookUrl = "https://discord.com/api/webhooks/1320461959937658952/L2mQrX88Ip_tVWgHHnmPcg_haFIlnXXBIuHvcjJqtjdD9Caw4F_Lebjl0_uMQu7Rqk-h"; 
+        
+          // Create a request object
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", webhookUrl, true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+        
+          // Create the JSON payload
+          var data = JSON.stringify({
+            "content": message
+          });
+        
+          // Send the request
+          xhr.send(data);
+        }
+        </script>
 </body>
 </html>
